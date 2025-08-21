@@ -177,10 +177,10 @@ endmodule
 ![Technology view](https://github.com/Kirubakaran-001/4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM/blob/8b7e74f01600ae5250db6c9583e9c002f75f1576/IMAGES%20%26%20VIDEO/schematic_view_expanded.png)
 ---
 ## 🛠️ Resource utilisation
-![Resource utilisation]()
+![Resource utilisation](https://github.com/Kirubakaran-001/4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM/blob/518da3dacf8b7db131c04870fbd485a7ca50bb1a/IMAGES%20%26%20VIDEO/utilization.png)
 ---
 ## ⚙️ Timing analysis
-![Timing analysis]()
+![Timing analysis](https://github.com/Kirubakaran-001/4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM/blob/518da3dacf8b7db131c04870fbd485a7ca50bb1a/IMAGES%20%26%20VIDEO/time_analysis.png)
 ---
 ## 🛠️ power summary
 ![power summary](https://github.com/Kirubakaran-001/4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM/blob/a2ca6bbe21877c26aa93428b61123a64b3c5a288/IMAGES%20%26%20VIDEO/Power_utilization.png)

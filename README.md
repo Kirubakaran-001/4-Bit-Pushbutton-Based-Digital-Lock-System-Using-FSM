@@ -34,8 +34,8 @@ There are two resets :
 
 ## 🛠 Tools & Hardware
 
-Software :  Vivado.
-Hardware :  Avnet AES-Z7EV-7Z020-G Evaluation Kit Zynq-7000 System-on-Chip (SoC) Zedboard Diligent Pmod Compatible.
+- **Software** :  Vivado.
+- **Hardware** :  Avnet AES-Z7EV-7Z020-G Evaluation Kit Zynq-7000 System-on-Chip (SoC) Zedboard Diligent Pmod Compatible.
 
 ---
 
@@ -72,6 +72,8 @@ Hardware :  Avnet AES-Z7EV-7Z020-G Evaluation Kit Zynq-7000 System-on-Chip (SoC)
 ---
 
 ## 📂 design.v
+
+```
 module digital_lock_4bit(
     input clk,
     input reset,         
@@ -82,10 +84,8 @@ module digital_lock_4bit(
     output reg lockout_led,
     output reg [2:0] attempt_led 
 );
-
     parameter PASS = 4'b1010; 
     reg [2:0] attempts;
-
     always @(posedge clk or posedge reset) begin
         if (reset) begin
             attempts <= 3;
@@ -113,7 +113,6 @@ module digital_lock_4bit(
             end
         end
     end
-
     always @(*) begin
         case (attempts)
             3: attempt_led = 3'b111;
@@ -124,17 +123,18 @@ module digital_lock_4bit(
         endcase
     end
 endmodule
+```
 
 ---
 
 ## 📂 testbench.v
 
+```
 module tb_digital_lock_4bit;
     reg clk, reset, admin_reset, enter;
     reg [3:0] code_in;
     wire unlock_led, lockout_led;
     wire [2:0] attempt_led;
-
     digital_lock_4bit uut(
         .clk(clk),
         .reset(reset),
@@ -145,12 +145,9 @@ module tb_digital_lock_4bit;
         .lockout_led(lockout_led),
         .attempt_led(attempt_led)
     );
-
     initial clk = 0;
     always #5 clk = ~clk;
-
     initial begin
-       
         reset = 1; admin_reset = 0; enter = 0; code_in = 4'b0000;
         #10 reset = 0;
         code_in = 4'b0001; enter = 1; #10 enter = 0; #10;
@@ -161,10 +158,10 @@ module tb_digital_lock_4bit;
         code_in = 4'b0110; enter = 1; #10 enter = 0; #10;
         admin_reset = 1; #10 admin_reset = 0;
         code_in = 4'b1010; enter = 1; #10 enter = 0;
-
         #50 $stop;
     end
 endmodule
+```
 ---
 
 ## 🧪 Simulation
@@ -172,24 +169,24 @@ endmodule
 
 ---
 
-## ⚙️ Schematic View
+## 🛠️ Schematic View
 ![Schematic]()
 
 ---
-## ⚙️Technology view
+## ⚙️ Technology view
 ![Technology view]()
 ---
-## ⚙️Resource utilisation
+## 🛠️ Resource utilisation
 ![Resource utilisation]()
 ---
-## ⚙️Timing analysis
+## ⚙️ Timing analysis
 ![Timing analysis]()
 ---
-## ⚙️power summary
+## 🛠️ power summary
 ![power summary]()
 ---
-## FPGA I/O Port Assignments
-![Resource utilisation]()
+## ⚙️ FPGA I/O Port Assignments
+![i/o declaration]()
 ---
 
 ## 📂 File Structure

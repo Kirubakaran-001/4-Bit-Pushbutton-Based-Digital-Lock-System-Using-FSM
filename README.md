@@ -183,16 +183,20 @@ endmodule
 ![Timing analysis]()
 ---
 ## 🛠️ power summary
-![power summary]()
+![power summary](https://github.com/Kirubakaran-001/4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM/blob/a2ca6bbe21877c26aa93428b61123a64b3c5a288/IMAGES%20%26%20VIDEO/Power_utilization.png)
 ---
 ## ⚙️ FPGA I/O Port Assignments
 ![i/o declaration]()
+---
+## ⚙️Package
+![package](https://github.com/Kirubakaran-001/4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM/blob/a2ca6bbe21877c26aa93428b61123a64b3c5a288/IMAGES%20%26%20VIDEO/package.png)
 ---
 
 ## 📂 File Structure
 ![filemanager]()
 
 ---
+
 
 ## 💫 Implementation Notes
 Code is four bits, entered sequentially via pushbuttons.

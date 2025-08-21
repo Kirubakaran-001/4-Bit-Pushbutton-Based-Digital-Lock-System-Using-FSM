@@ -3,7 +3,7 @@
 ---
 
 ## 📝 Overview
-This project implements a 4-Bit Pushbutton-Based Digital Lock System using a Finite State Machine (FSM) approach. The system allows access only when a preset 4-bit code is entered in correct sequence using pushbuttons, making it suitable for low-cost secure entry systems. Unlock status and Lockout state and number of Attempts are indicated with LEDs .
+This project implements a 4-Bit Pushbutton-Based Digital Lock System using a Finite State Machine (FSM) approach. The system allows access only when a 4-bit code is entered in correct sequence using pushbuttons, making it suitable for low-cost secure entry systems. Unlock status and Lockout state and number of Attempts are indicated with LEDs .
 
 ---
 
@@ -13,19 +13,19 @@ This project implements a 4-Bit Pushbutton-Based Digital Lock System using a Fin
 ---
 
 ## 📜 Problem Statement
-Design an FSM-based Digital Lock System where a 4-digit password is entered,Use 4 pushbuttons for code input (1 bit per button press). Compares input with the access code.
-Unlocks system if code matches and remains locked otherwise.If more than three attempts of wrong password then the door should lockout and remains in the lockout state untill admin reset.
-if admin reset is given then all three attempts should be again reset to three.
+Design an FSM-based Digital Lock System where a 4-digit password is entered, Use 4 pushbuttons for code input (1 bit per button press). Compares input with the access code.
+Unlocks system if code matches and remains locked otherwise. If more than three attempts of wrong password then the door should lockout and remains in the lockout state untill admin reset.
+if admin reset is given then all three attempts should be again reset.
 
 ---
 
 ## ✨ Features
 ### Functionality :
-Receives input on each button press,totally 4 bit input, so 4 pushbutton are used, the input are not feeded untill enter is given, when the enter is high the input is feeded and then input is compared with the preset code.
+Receives input on each button press,totally 4 bit input, so 4 pushbutton are used, the input are not feeded untill enter is given, when the enter is high the input is feeded and then input is compared with the pre-set code.
 Incorrect input resets FSM to IDLE , Unlock output/LED gets enabled if code matches. At initial state system has 3 attempts. 
 #### Two cases :
 #### case 1 : if three wrong attempts then the led will set into a lockout, remain in the lockout untill admin reset. When the admin reset is high, all 3 attempts are regained.
-#### case 2 : if correct code is entered within 3 attempts then the output led will be high and all 3 attempts are regained again.
+#### case 2 : if correct code is entered within 3 attempts then the output/Unlock led will be high and all 3 attempts are regained again.
 There are two resets :
 1) admin reset  : used to over come the lockout state and to regain the attempts.
 2) clk reset    : used to stop the clk signal.
@@ -45,20 +45,20 @@ There are two resets :
 |--------------|-----------|----------------------------------------------|
 |`clk`         |   Input   | clock signal                                 |
 |`reset`       |   Input   | clk reset                                    |
-|`admin_reset` |   Input   | user reset                                   |
+|`admin_reset` |   Input   | attempts reset                               |
 |`enter`       |   Input   | use to feed input                            |
 |`code_in`     |   Input   | Input from pushbuttons (1 bit per pushbutton)| 
-|`unlock_led`  |   Output  | High when code is correct                    |
+|`unlock_led`  |   Output  | High when input is correct                   |
 |`attempt_leds`|   Output  |show the number of attmpts left               |
-|`lockout_led` |   Output  | freeze the system untill admin reset         |
+|`lockout_led` |   Output  | freeze the system untill reset               |
 |`clkout`      |   Output  | clock signal output                          |
 
 ---
 
 ## 🔄 FSM States
 
-- **IDLE**           – Waiting for input to be entered.
-- **Enter password** – First bit received.
+- **IDLE**           – Waiting for input to be feeded.
+- **Enter password** – feed input and compare the input with the pre-set password.
 - **UNLOCK**         – Access granted.
 - **LOCKOUT**        – Incorrect input for more than 3 times.
 - **Admin_Reset**    – reset agian all attempts to 3.
@@ -199,7 +199,7 @@ endmodule
 
 
 ## 💫 Implementation Video
-the output Video of the our projet is here check it out.
+### the output Video of the our project is here check it out.
 
 [4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM.mp4](https://drive.google.com/file/d/1oQnhxVV3mWzcZlVZffv1pIT6zSr_PAW6/view?usp=sharing)
 
@@ -207,7 +207,7 @@ the output Video of the our projet is here check it out.
 
 ## 👥 Contributors
 
-#### Kirubakaran S, Bannari Amman Institute Of Technology ( [linkedin](https://www.linkedin.com/in/kirubakaran-s-b086ab355/) )
-#### Kavin V, Bannari Amman Institute Of Technology ( [linkedin]() )
+### Kirubakaran S, Bannari Amman Institute Of Technology ( [linkedin](https://www.linkedin.com/in/kirubakaran-s-b086ab355/) )
+### Kavin V, Bannari Amman Institute Of Technology ( [linkedin]() )
 
 ---

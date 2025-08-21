@@ -3,7 +3,7 @@
 ## 📝 Overview
 This project implements a 4-Bit Pushbutton-Based Digital Lock System using a Finite State Machine (FSM) approach. The system allows access only when a preset 4-bit code is entered in correct sequence using pushbuttons, making it suitable for low-cost secure entry systems. Unlock status and Lockout state and number of Attempts are indicated with LEDs.
 
-![Fpga]()
+![Fpga](https://github.com/Kirubakaran-001/4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM/blob/ee7ad96bfb2fd96f9d4ace90fd6d3b418579ef29/IMAGES%20%26%20VIDEO/fpga_pinmapping.png)
 
 ## 📜 Problem Statement
 Design a Digital Lock FSM that:

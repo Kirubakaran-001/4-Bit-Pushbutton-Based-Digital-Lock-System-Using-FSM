@@ -20,8 +20,6 @@ if admin reset is given then all three attempts should be again reset to three.
 ---
 
 ## ✨ Features
-### Schematic view :
-![schematic_view_expanded]()
 ### Functionality :
 Receives input on each button press,totally 4 bit input, so 4 pushbutton are used, the input are not feeded untill enter is given, when the enter is high the input is feeded and then input is compared with the preset code.
 Incorrect input resets FSM to IDLE , Unlock output/LED gets enabled if code matches. At initial state system has 3 attempts. 
@@ -74,13 +72,99 @@ Hardware :  Avnet AES-Z7EV-7Z020-G Evaluation Kit Zynq-7000 System-on-Chip (SoC)
 ---
 
 ## 📂 design.v
-(Insert your main Verilog/VHDL or code, or link to files)
+module digital_lock_4bit(
+    input clk,
+    input reset,         
+    input admin_reset,   
+    input enter,        
+    input [3:0] code_in, 
+    output reg unlock_led,
+    output reg lockout_led,
+    output reg [2:0] attempt_led 
+);
+
+    parameter PASS = 4'b1010; 
+    reg [2:0] attempts;
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            attempts <= 3;
+            unlock_led <= 0;
+            lockout_led <= 0;
+        end
+        else if (admin_reset) begin
+            attempts <= 3;
+            unlock_led <= 0;
+            lockout_led <= 0;
+        end
+        else if (enter) begin
+            if (!lockout_led) begin
+                if (code_in == PASS) begin
+                    unlock_led <= 1;
+                    attempts <= 3; 
+                end
+                else begin
+                    unlock_led <= 0;
+                    if (attempts > 0)
+                        attempts <= attempts - 1;
+                    if (attempts == 1) 
+                        lockout_led <= 1;
+                end
+            end
+        end
+    end
+
+    always @(*) begin
+        case (attempts)
+            3: attempt_led = 3'b111;
+            2: attempt_led = 3'b110;
+            1: attempt_led = 3'b100;
+            0: attempt_led = 3'b000;
+            default: attempt_led = 3'b000;
+        endcase
+    end
+endmodule
 
 ---
 
 ## 📂 testbench.v
-(Insert your testbench code, or link to files)
 
+module tb_digital_lock_4bit;
+    reg clk, reset, admin_reset, enter;
+    reg [3:0] code_in;
+    wire unlock_led, lockout_led;
+    wire [2:0] attempt_led;
+
+    digital_lock_4bit uut(
+        .clk(clk),
+        .reset(reset),
+        .admin_reset(admin_reset),
+        .enter(enter),
+        .code_in(code_in),
+        .unlock_led(unlock_led),
+        .lockout_led(lockout_led),
+        .attempt_led(attempt_led)
+    );
+
+    initial clk = 0;
+    always #5 clk = ~clk;
+
+    initial begin
+       
+        reset = 1; admin_reset = 0; enter = 0; code_in = 4'b0000;
+        #10 reset = 0;
+        code_in = 4'b0001; enter = 1; #10 enter = 0; #10;
+        code_in = 4'b0010; enter = 1; #10 enter = 0; #10;
+        code_in = 4'b1010; enter = 1; #10 enter = 0; #10;
+        code_in = 4'b0100; enter = 1; #10 enter = 0; #10;
+        code_in = 4'b0101; enter = 1; #10 enter = 0; #10;
+        code_in = 4'b0110; enter = 1; #10 enter = 0; #10;
+        admin_reset = 1; #10 admin_reset = 0;
+        code_in = 4'b1010; enter = 1; #10 enter = 0;
+
+        #50 $stop;
+    end
+endmodule
 ---
 
 ## 🧪 Simulation

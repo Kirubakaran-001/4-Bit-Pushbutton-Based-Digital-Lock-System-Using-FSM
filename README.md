@@ -7,7 +7,7 @@ This project implements a 4-Bit Pushbutton-Based Digital Lock System using a Fin
 
 ---
 
-## Pin Mapping
+## 👉 Pin Mapping
 ![Fpga](https://github.com/Kirubakaran-001/4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM/blob/ee7ad96bfb2fd96f9d4ace90fd6d3b418579ef29/IMAGES%20%26%20VIDEO/fpga_pinmapping.png)
 
 ---

@@ -67,7 +67,7 @@ There are two resets :
 
 ## 📊 FSM State Diagram
 
-![Fpga_statediagram]()
+![Fpga_statediagram](https://github.com/Kirubakaran-001/4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM/blob/8b7e74f01600ae5250db6c9583e9c002f75f1576/IMAGES%20%26%20VIDEO/State_diagram.png)
 
 ---
 
@@ -165,16 +165,16 @@ endmodule
 ---
 
 ## 🧪 Simulation
-![wavefrom]()
+![wavefrom](https://github.com/Kirubakaran-001/4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM/blob/8b7e74f01600ae5250db6c9583e9c002f75f1576/IMAGES%20%26%20VIDEO/output_waveform.png)
 
 ---
 
 ## 🛠️ Schematic View
-![Schematic]()
+![Schematic](https://github.com/Kirubakaran-001/4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM/blob/8b7e74f01600ae5250db6c9583e9c002f75f1576/IMAGES%20%26%20VIDEO/schematic_view.png)
 
 ---
 ## ⚙️ Technology view
-![Technology view]()
+![Technology view](https://github.com/Kirubakaran-001/4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM/blob/8b7e74f01600ae5250db6c9583e9c002f75f1576/IMAGES%20%26%20VIDEO/schematic_view_expanded.png)
 ---
 ## 🛠️ Resource utilisation
 ![Resource utilisation]()

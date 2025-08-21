@@ -206,6 +206,8 @@ the output Video of the our projet is here check it out.
 ---
 
 ## 👥 Contributors
-Kirubakaran [add affiliation and LinkedIn if desired
+
+#### Kirubakaran S, Bannari Amman Institute Of Technology ( [linkedin](https://www.linkedin.com/in/kirubakaran-s-b086ab355/) )
+#### Kavin V, Bannari Amman Institute Of Technology ( [linkedin]() )
 
 ---

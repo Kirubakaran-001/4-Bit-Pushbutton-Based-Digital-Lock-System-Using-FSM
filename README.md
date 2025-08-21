@@ -198,12 +198,10 @@ endmodule
 ---
 
 
-## 💫 Implementation Notes
-Code is four bits, entered sequentially via pushbuttons.
+## 💫 Implementation Video
+the output Video of the our projet is here check it out.
 
-Each wrong entry resets the FSM.
-
-System can be enhanced with additional features like auditory buzzer or LCD for user prompts.
+[4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM.mp4](https://drive.google.com/file/d/1oQnhxVV3mWzcZlVZffv1pIT6zSr_PAW6/view?usp=sharing)
 
 ---
 

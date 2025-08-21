@@ -186,7 +186,7 @@ endmodule
 ![power summary](https://github.com/Kirubakaran-001/4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM/blob/a2ca6bbe21877c26aa93428b61123a64b3c5a288/IMAGES%20%26%20VIDEO/Power_utilization.png)
 ---
 ## ⚙️ FPGA I/O Port Assignments
-![i/o declaration]()
+![i/o declaration](https://github.com/Kirubakaran-001/4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM/blob/df22cccfb4918c83e43f14bbedc8ec11ed74554f/IMAGES%20%26%20VIDEO/pin_declaration.png)
 ---
 ## ⚙️Package
 ![package](https://github.com/Kirubakaran-001/4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM/blob/a2ca6bbe21877c26aa93428b61123a64b3c5a288/IMAGES%20%26%20VIDEO/package.png)

@@ -1,9 +1,9 @@
 # 4-Bit-Pushbutton-Based-Digital-Lock-System-Using-FSM
 
-##📝 Overview
+## 📝 Overview
 This project implements a 4-Bit Pushbutton-Based Digital Lock System using a Finite State Machine (FSM) approach. The system allows access only when a preset 4-bit code is entered in correct sequence using pushbuttons, making it suitable for low-cost secure entry systems. Unlock status and intermediate states can be indicated with LEDs.
 
-##📜 Problem Statement
+## 📜 Problem Statement
 Design a Digital Lock FSM that:
 
 Uses 4 pushbuttons for code input (1 bit per button press).
@@ -14,7 +14,7 @@ Unlocks system if code matches; remains locked otherwise.
 
 Optionally indicates state transitions and errors using LEDs.
 
-##✨ Features
+## ✨ Features
 FSM Stages:
 
 IDLE → INPUT1 → INPUT2 → INPUT3 → INPUT4 → UNLOCKED/LOCKED
@@ -50,7 +50,7 @@ Software: (e.g., Vivado, Quartus, ModelSim, etc.)
 
 Hardware: Any generic FPGA/MCU board with 4 buttons, 1+ LEDs
 
-##🔌 Inputs & Outputs
+## 🔌 Inputs & Outputs
 Signal Name	Direction	Description
 clk	Input	System clock signal
 reset	Input	Active-high reset
@@ -59,7 +59,7 @@ unlock	Output	High when system is unlocked
 state_leds	Output	(Optional) FSM state visibility
 error_led	Output	(Optional) Error status indicator
 
-##🔄 FSM States
+## 🔄 FSM States
 IDLE – Waiting for input
 
 INPUT1 – First bit received
@@ -80,22 +80,22 @@ Correct input for each step: move to next state
 
 Incorrect input: move to ERROR/IDLE
 
-##📊 FSM State Diagram
+## 📊 FSM State Diagram
 (Include a diagram image if available)
 
-##📂 design.v
+## 📂 design.v
 (Insert your main Verilog/VHDL or code, or link to files)
 
-##📂 testbench.v
+## 📂 testbench.v
 (Insert your testbench code, or link to files)
 
-##🧪 Simulation
+## 🧪 Simulation
 (Describe or show results of simulation, with waveform screenshots if possible)
 
-##⚙️ Schematic View
+## ⚙️ Schematic View
 (Attach images or describe the hardware schematic)
 
-##📂 File Structure
+## 📂 File Structure
 text
 /src
   |- design.v
@@ -104,12 +104,12 @@ text
   |- schematic.png
   |- fsm_diagram.png
 README.md
-##💫 Implementation Notes
+## 💫 Implementation Notes
 Code is four bits, entered sequentially via pushbuttons.
 
 Each wrong entry resets the FSM.
 
 System can be enhanced with additional features like auditory buzzer or LCD for user prompts.
 
-##👥 Contributors
+## 👥 Contributors
 Kirubakaran [add affiliation and LinkedIn if desired

@@ -208,6 +208,6 @@ endmodule
 ## 👥 Contributors
 
 ### Kirubakaran S, Bannari Amman Institute Of Technology ( [linkedin](https://www.linkedin.com/in/kirubakaran-s-b086ab355/) )
-### Kavin V, Bannari Amman Institute Of Technology ( [linkedin]() )
+### Kavin V, Bannari Amman Institute Of Technology ( [linkedin](https://www.linkedin.com/in/kavin-v-b45969304/) )
 
 ---
